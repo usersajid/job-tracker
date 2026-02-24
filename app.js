@@ -79,16 +79,6 @@ const jobsData = [
     salary: "$115,000 - $155,000",
     description: "Join our core team to develop engaging 3D mobile games. Strong C# skills and a passion for gaming required.",
     status: "all"
-  },
-  {
-    id: 9,
-    companyName: "GamePlay Studios",
-    position: "Unity 3D Developer",
-    location: "San Francisco, CA",
-    type: "Full-time",
-    salary: "$115,000 - $155,000",
-    description: "Join our core team to develop engaging 3D mobile games. Strong C# skills and a passion for gaming required.",
-    status: "all"
   }
 ];
 
@@ -124,7 +114,6 @@ function updateCounters() {
 }
 
 // Function to display jobs in the UI
-// Job er status (Interview/Rejected) change korar function
 function changeStatus(id, newStatus) {
   const job = jobsData.find(j => j.id === id);
   if (job) {
@@ -133,7 +122,6 @@ function changeStatus(id, newStatus) {
   }
 }
 
-// Job Delete korar function
 function deleteJob(id) {
   const jobIndex = jobsData.findIndex(j => j.id === id);
   if (jobIndex !== -1) {
@@ -144,7 +132,7 @@ function deleteJob(id) {
 
 // Function to display jobs in the UI
 function renderJobs(filterType) {
-  jobsContainer.innerHTML = ""; // Clear existing content
+  jobsContainer.innerHTML = ""; 
   currentTab = filterType;
 
   // Filter the array based on selected tab
